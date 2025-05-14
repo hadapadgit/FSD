@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feedback Page with Web Storage</title>
+</head>
+<body>
+
+  <article>
+    <h2>User Feedback Form</h2>
+    <form id="feedbackForm">
+      <!-- Name input -->
+      <label for="name">Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <!-- Feedback input -->
+      <label for="feedback">Your Feedback:</label><br>
+      <textarea id="feedback" name="feedback" rows="4" cols="40" required></textarea><br><br>
+
+      <!-- Submit button -->
+      <input type="submit" value="Submit">
+    </form>
+  </article>
+
+  <aside>
+    <h3>About Web Storage</h3>
+    <p>
+      <strong>localStorage</strong> and <strong>sessionStorage</strong> are part of the Web Storage API in HTML5.
+      <br><br>
+      - <strong>localStorage</strong> stores data with no expiration time. It remains even after the browser is closed.
+      <br>
+      - <strong>sessionStorage</strong> stores data only for the duration of the page session. Once the tab or browser is closed, the data is lost.
+      <br><br>
+      These are commonly used to save user preferences, temporary form data, or session state.
+    </p>
+  </aside>
+
+  <script>
+    // Handle form submission
+    document.getElementById("feedbackForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Get input values
+      const name = document.getElementById("name").value;
+      const feedback = document.getElementById("feedback").value;
+
+      // Store in localStorage
+      localStorage.setItem("userName", name);
+      localStorage.setItem("userFeedback", feedback);
+
+      // Store in sessionStorage
+      sessionStorage.setItem("sessionName", name);
+      sessionStorage.setItem("sessionFeedback", feedback);
+
+      alert("Feedback saved! (Check localStorage and sessionStorage in browser dev tools)");
+      
+      // Optionally clear the form
+      document.getElementById("feedbackForm").reset();
+    });
+  </script>
+
+</body>
+</html>
+
