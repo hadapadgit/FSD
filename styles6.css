@@ -1,0 +1,74 @@
+
+h1 {
+  text-align: center;
+}
+
+p {
+  color: #333333;  /* dark gray */
+  font-size: 20px;
+}
+
+/* Remove underline and set default color */
+nav a {
+  text-decoration: none;
+  color: darkblue;
+  margin-right: 20px; /* Optional: space between links */
+  font-size: 18px;
+}
+
+.box {
+  background-color: lightgray;  /* Set background to light gray */
+  padding: 20px;                /* Add padding */
+  border: 1px solid black;      /* Add border */
+}
+
+.btn {
+  border-radius: 10px;        /* Rounded corners */
+  padding: 10px 20px;         /* Padding: 10px top/bottom, 20px left/right */
+  background-color: #007BFF;  /* Background color */
+  color: white;               /* Text color */
+  border: none;               /* Optional: remove default border */
+  cursor: pointer;            /* Pointer cursor on hover */
+  font-size: 16px;            /* Optional: improve font size */
+}
+
+/* Optional: Add a hover effect */
+.btn:hover {
+  background-color: #0056b3;  /* Slightly darker blue on hover */
+}
+
+.container {
+  display: flex;                  /* Enable Flexbox */
+  justify-content: space-between; /* Add space between items */
+  padding: 20px;                  /* Optional: add padding around the container */
+  background-color: #f0f0f0;      /* Optional: light background for visibility */
+}
+
+
+
+/* Change color on hover */
+nav a:hover {
+  color: orange;
+}
+
+
+.card {
+  border: 1px solid #ccc;            /* Border */
+  padding: 20px;                     /* Padding inside the card */
+  transition: box-shadow 0.3s ease;  /* Smooth transition effect */
+}
+
+/* Box shadow on hover */
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Style for even rows */
+table tr:nth-child(even) {
+  background-color: #f0f0f0; /* Light background for even rows */
+}
+
+/* Style for odd rows */
+table tr:nth-child(odd) {
+  background-color: white;   /* White background for odd rows */
+}
